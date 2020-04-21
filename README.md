@@ -51,7 +51,7 @@ then in your component or controller 's actions:
 You know, after some time the hCaptcha response expires; `hCaptcha` 's default behavior is to invoke the [reset method](https://docs.hcaptcha.com/configuration#jsapi). But, if you want to perform custom behavior instead (e.g. transitioning to another route) you can pass your custom action via the `onExpired` property, like this:
 
 ```handlebars
-<HCaptcha @onSuccess={{fn this.onCaptchaResolved}} @onExpired={{fn this.onCaptchaExpired}}
+<HCaptcha @onSuccess={{fn this.onCaptchaResolved}} @onExpired={{fn this.onCaptchaExpired}} />
 ```
 
 then in your component or controller 's actions:
