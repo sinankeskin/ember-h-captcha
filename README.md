@@ -121,7 +121,7 @@ then in your component or controller 's actions:
   }
 
   @action
-  onCaptchaError() {
+  onCaptchaError(error) {
     // Warn user
   }
 ```

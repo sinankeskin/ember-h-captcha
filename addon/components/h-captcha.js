@@ -93,16 +93,14 @@ export default class HCaptchaComponent extends Component {
 
     if (isPresent(action) && typeof action === 'function') {
       action();
-    } else {
-      this.reset();
     }
   }
 
-  onErrorCallback() {
+  onErrorCallback(error) {
     const action = this.args.onError;
 
     if (isPresent(action) && typeof action === 'function') {
-      action();
+      action(error);
     }
   }
 
