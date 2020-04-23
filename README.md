@@ -36,12 +36,12 @@ Add the component to your template like this:
 then in your component or controller 's actions:
 
 ```js
-  @action
-  onCaptchaResolved(response) {
-    this.model.set('response', response);
-    // You should then save your model and the server would validate response
-    // ...
-  }
+@action
+onCaptchaResolved(response) {
+  this.model.set('response', response);
+  // You should then save your model and the server would validate response
+  // ...
+}
 ```
 
 ## Advanced Usage
@@ -57,10 +57,10 @@ You know, after some time the hCaptcha response expires; `hCaptcha` 's default b
 then in your component or controller 's actions:
 
 ```js
-  @action
-  onCaptchaExpired() {
-    // your custom logic here
-  }
+@action
+onCaptchaExpired() {
+  // your custom logic here
+}
 ```
 
 ### Triggering Reset
@@ -86,21 +86,20 @@ To do so, you can do something like this:
 
 ```handlebars
 <HCaptcha @onSuccess={{fn this.onCaptchaResolved}} @onRender={{fn this.onCaptchaRendered}} />
-
 ```
 
 then in your component or controller 's actions:
 
 ```js
-  @action
-  onCaptchaResolved() {
-    // ...
-  }
+@action
+onCaptchaResolved() {
+  // ...
+}
 
-  @action
-  onCaptchaRendered(instance) {
-    // your custom onRender logic
-  }
+@action
+onCaptchaRendered(instance) {
+  // your custom onRender logic
+}
 ```
 
 ### onError Callback
@@ -109,21 +108,20 @@ You might want to pass a callback function that will be called after the error o
 
 ```handlebars
 <HCaptcha @onSuccess={{fn this.onCaptchaResolved}} @onError={{fn this.onCaptchaError}} />
-
 ```
 
 then in your component or controller 's actions:
 
 ```js
-  @action
-  onCaptchaResolved() {
-    // ...
-  }
+@action
+onCaptchaResolved() {
+  // ...
+}
 
-  @action
-  onCaptchaError(error) {
-    // Warn user
-  }
+@action
+onCaptchaError(error) {
+  // Warn user
+}
 ```
 
 ### Customization
