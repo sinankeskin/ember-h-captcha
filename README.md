@@ -6,7 +6,9 @@
 
 Run the following command from inside your ember-cli project:
 
-    ember install ember-h-captcha
+- Ember.js v3.16 or above
+- Ember CLI v2.13 or above
+- Node.js v10 or above
 
 ## Configure
 
@@ -81,7 +83,7 @@ this.hCaptcha.reset();
 ### onRender Callback
 
 You might want to pass a callback function that will be called after the hCaptcha renders on the page. onRender callback also returns component instance.
-This is great for things like loading spinners. 
+This is great for things like loading spinners.
 To do so, you can do something like this:
 
 ```handlebars
