@@ -1,19 +1,19 @@
 /* globals hcaptcha */
-import { getOwner } from '@ember/application';
-import { assign } from '@ember/polyfills';
-import { action, computed, get } from '@ember/object';
-import { isPresent } from '@ember/utils';
+
+import { action, get } from '@ember/object';
+
 import Component from '@glimmer/component';
+import { assign } from '@ember/polyfills';
+import { getOwner } from '@ember/application';
+import { isPresent } from '@ember/utils';
 
 export default class HCaptchaComponent extends Component {
-  @computed
   get config() {
     const _config = getOwner(this).resolveRegistration('config:environment') || {};
 
     return _config['ember-h-captcha'] || {};
   }
 
-  @computed('config')
   get options() {
     let _options = {};
 
