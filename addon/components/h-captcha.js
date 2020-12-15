@@ -4,25 +4,29 @@ import { action, get } from '@ember/object';
 
 import Component from '@glimmer/component';
 import { assign } from '@ember/polyfills';
+import { cached } from '@glimmer/tracking';
 import { getOwner } from '@ember/application';
 import { isPresent } from '@ember/utils';
 
 export default class HCaptchaComponent extends Component {
+  @cached
   get config() {
     const _config = getOwner(this).resolveRegistration('config:environment') || {};
 
     return _config['ember-h-captcha'] || {};
   }
 
+  @cached
   get options() {
     let _options = {};
 
-    assign(_options, this.config, this.componentOptions());
+    assign(_options, this.config, this.componentOptions);
 
     return _options;
   }
 
-  componentOptions() {
+  @cached
+  get componentOptions() {
     const defaults = ['sitekey', 'theme', 'size', 'tabindex'];
 
     const options = {};
