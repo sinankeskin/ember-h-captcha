@@ -11,7 +11,8 @@ import { isPresent } from '@ember/utils';
 export default class HCaptchaComponent extends Component {
   @cached
   get config() {
-    const _config = getOwner(this).resolveRegistration('config:environment') || {};
+    const _config =
+      getOwner(this).resolveRegistration('config:environment') || {};
 
     return _config['ember-h-captcha'] || {};
   }
@@ -48,7 +49,9 @@ export default class HCaptchaComponent extends Component {
 
     this.appendScript(
       [
-        `${this.config['jsUrl'] || 'https://hcaptcha.com/1/api.js'}?render=explicit`,
+        `${
+          this.config['jsUrl'] || 'https://hcaptcha.com/1/api.js'
+        }?render=explicit`,
         'onload=__ember_h_captcha_onload',
         this.config['hl'] ? `hl=${this.config['hl']}` : '',
       ].join('&')
