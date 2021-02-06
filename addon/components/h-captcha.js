@@ -83,7 +83,6 @@ export default class HCaptchaComponent extends Component {
     scriptTag.src = src;
     scriptTag.async = true;
     scriptTag.defer = true;
-    scriptTag.crossOrigin = 'anonymous';
 
     document.body.appendChild(scriptTag);
   }
