@@ -43,6 +43,10 @@ export default class HCaptchaComponent extends Component {
 
   @action
   initialize(element) {
+    if (window.hcaptcha) {
+      this.render(element);
+      return
+    }
     window.__ember_h_captcha_onload = () => {
       this.render(element);
     };
