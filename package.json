@@ -1,6 +1,6 @@
 {
   "name": "ember-h-captcha",
-  "version": "2.0.31",
+  "version": "2.0.32",
   "description": "Ember addon for hCaptcha.",
   "keywords": [
     "ember-addon",
