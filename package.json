@@ -32,7 +32,7 @@
   },
   "dependencies": {
     "@ember/render-modifiers": "^1.0.2",
-    "ember-cli-babel": "^7.26.5",
+    "ember-cli-babel": "^7.26.6",
     "ember-cli-htmlbars": "^5.7.1",
     "tracked-toolbox": "^1.2.3"
   },
