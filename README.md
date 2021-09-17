@@ -6,9 +6,11 @@
 
 Run the following command from inside your ember-cli project:
 
-- Ember.js v3.16 or above
-- Ember CLI v2.13 or above
-- Node.js v10 or above
+`ember install ember-h-captcha`
+
+* Ember.js v3.20 or above
+* Ember CLI v3.20 or above
+* Node.js v12 or above
 
 ## Configure
 
