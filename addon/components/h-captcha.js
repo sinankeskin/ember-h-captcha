@@ -4,7 +4,7 @@ import { action, get } from '@ember/object';
 
 import Component from '@glimmer/component';
 import { assign } from '@ember/polyfills';
-import { cached } from 'tracked-toolbox';
+import { cached } from '@glimmer/tracking';
 import { getOwner } from '@ember/application';
 import { isPresent } from '@ember/utils';
 
