@@ -13,7 +13,8 @@
     "start": "concurrently 'npm:start:*' --restart-after 5000 --prefix-colors cyan,white,yellow",
     "start:addon": "npm start --workspace ember-h-captcha -- --no-watch.clearScreen",
     "start:test-app": "npm start --workspace test-app",
-    "test": "npm run test --workspaces --if-present"
+    "test": "npm run test --workspaces --if-present",
+    "deploy": "npm version patch && git push && git push origin --tags && npm publish --workspace ember-h-captcha"
   },
   "devDependencies": {
     "concurrently": "^7.2.1",
