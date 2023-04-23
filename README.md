@@ -6,9 +6,8 @@
 
 ## Compatibility
 
-* Ember.js v3.28 or above
-* Ember CLI v3.28 or above
-* Node.js v14 or above
+- Ember.js v3.28 or above
+* Embroider or ember-auto-import v2
 
 ## Configure
 
@@ -53,7 +52,10 @@ onCaptchaResolved(response) {
 You know, after some time the hCaptcha response expires; `hCaptcha` 's default behavior is to invoke the [reset method](https://docs.hcaptcha.com/configuration#jsapi). But, if you want to perform custom behavior instead (e.g. transitioning to another route) you can pass your custom action via the `onExpired` property, like this:
 
 ```handlebars
-<HCaptcha @onSuccess={{fn this.onCaptchaResolved}} @onExpired={{fn this.onCaptchaExpired}} />
+<HCaptcha
+  @onSuccess={{fn this.onCaptchaResolved}}
+  @onExpired={{fn this.onCaptchaExpired}}
+/>
 ```
 
 then in your component or controller 's actions:
@@ -71,7 +73,10 @@ You might want to arbitrarily trigger [hCaptcha reset](https://docs.hcaptcha.com
 To do that, first you'll need to grab a reference to `hCaptcha` component in your template, like this:
 
 ```handlebars
-<HCaptcha @onSuccess={{fn this.onCaptchaResolved}} @onRender={{fn (mut this.hCaptcha)}} />
+<HCaptcha
+  @onSuccess={{fn this.onCaptchaResolved}}
+  @onRender={{fn (mut this.hCaptcha)}}
+/>
 ```
 
 then you'll be able to invoke `reset()` method on `hCaptcha` property anywhere in your component or controller 's code, like this:
@@ -87,7 +92,10 @@ This is great for things like loading spinners.
 To do so, you can do something like this:
 
 ```handlebars
-<HCaptcha @onSuccess={{fn this.onCaptchaResolved}} @onRender={{fn this.onCaptchaRendered}} />
+<HCaptcha
+  @onSuccess={{fn this.onCaptchaResolved}}
+  @onRender={{fn this.onCaptchaRendered}}
+/>
 ```
 
 then in your component or controller 's actions:
@@ -109,7 +117,10 @@ onCaptchaRendered(instance) {
 You might want to pass a callback function that will be called after the error occured. To do so, you can do something like this:
 
 ```handlebars
-<HCaptcha @onSuccess={{fn this.onCaptchaResolved}} @onError={{fn this.onCaptchaError}} />
+<HCaptcha
+  @onSuccess={{fn this.onCaptchaResolved}}
+  @onError={{fn this.onCaptchaError}}
+/>
 ```
 
 then in your component or controller 's actions:
