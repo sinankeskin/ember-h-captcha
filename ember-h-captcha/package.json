@@ -26,16 +26,16 @@
     "prepare": "npm run build"
   },
   "dependencies": {
-    "@embroider/addon-shim": "^1.0.0",
-    "@ember/render-modifiers": "^2.0.5",
-    "ember-cached-decorator-polyfill": "^1.0.1"
+    "@embroider/addon-shim": "^1.8.7",
+    "@ember/render-modifiers": "^2.1.0",
+    "ember-cached-decorator-polyfill": "^1.0.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.17.0",
-    "@babel/eslint-parser": "^7.18.2",
+    "@babel/core": "^7.23.7",
+    "@babel/eslint-parser": "^7.23.3",
     "@babel/plugin-proposal-class-properties": "^7.16.7",
-    "@babel/plugin-proposal-decorators": "^7.17.0",
-    "@babel/plugin-syntax-decorators": "^7.17.0",
+    "@babel/plugin-proposal-decorators": "^7.23.7",
+    "@babel/plugin-syntax-decorators": "^7.23.3",
     "@embroider/addon-dev": "^3.0.0",
     "@rollup/plugin-babel": "^5.3.0",
     "concurrently": "^7.2.1",
@@ -47,7 +47,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "prettier": "^2.5.1",
     "rollup": "^2.67.0",
-    "rollup-plugin-copy": "^3.4.0"
+    "rollup-plugin-copy": "^3.5.0"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org"
